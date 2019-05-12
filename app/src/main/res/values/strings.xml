@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mobile2</string>
+    <string name="action_settings">Settings</string>
+    <string name="time">时间</string>
+    <string name="device">设备状态:</string>
+    <string name="temperatureChart">温度折线图</string>
+    <string name="humidityChart">湿度折线图</string>
+    <string name="illuminationChart">光照折线图</string>
+    <string name="pressureChart">大气压折线图</string>
+    <string name="ultravioletChart">紫外线折线图</string>
+    <string name="concentrationChart">PM2.5折线图</string>
+    <string name="title_activity_line_chart_humidity">LineChartActivityHumidity</string>
+
+</resources>

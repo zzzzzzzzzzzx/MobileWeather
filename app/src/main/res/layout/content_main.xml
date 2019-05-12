@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <ImageButton
+        android:id="@+id/Button_GetInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:src="@mipmap/fresh"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/device_state"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
+
+        android:layout_width="350dp"
+        android:layout_height="366dp"
+        android:layout_gravity="fill_horizontal"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button_GetInfo">
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/time"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageButton
+            android:id="@+id/Temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            app:layout_column="1"
+            app:layout_gravity="center_horizontal"
+            app:layout_row="0"
+            app:srcCompat="@mipmap/temperature" />
+
+        <ImageButton
+            android:id="@+id/Humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            app:layout_column="2"
+            app:layout_gravity="center_horizontal"
+            app:layout_row="0"
+            app:srcCompat="@mipmap/humidity" />
+
+        <ImageButton
+            android:id="@+id/Illumination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            app:layout_column="3"
+            app:layout_gravity="center_horizontal"
+            app:layout_row="0"
+            app:srcCompat="@mipmap/illumination" />
+
+        <ImageButton
+            android:id="@+id/Pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            app:layout_column="4"
+            app:layout_gravity="center_horizontal"
+            app:layout_row="0"
+            app:srcCompat="@mipmap/pressure" />
+
+        <ImageButton
+            android:id="@+id/Ultraviolet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            app:layout_column="5"
+            app:layout_gravity="center"
+            app:layout_row="0"
+            app:srcCompat="@mipmap/ultraviolet" />
+
+        <ImageButton
+            android:id="@+id/Concentration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            app:layout_column="6"
+            app:layout_gravity="center_horizontal"
+            app:layout_row="0"
+            app:srcCompat="@mipmap/concentration" />
+
+
+        <TextView
+            android:id="@+id/time1"
+            android:layout_width="60dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--:--"
+            app:layout_column="0"
+            app:layout_row="1"
+            tools:text="--:--" />
+
+        <TextView
+            android:id="@+id/temperature1"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="1"
+            app:layout_row="1"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/humidity1"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="2"
+            app:layout_row="1"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/illumination1"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="3"
+            app:layout_row="1"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/pressure1"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="4"
+            app:layout_row="1"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/ultraviolet1"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="5"
+            app:layout_row="1"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/concentration1"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="6"
+            app:layout_row="1"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/time2"
+            android:layout_width="60dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--:--"
+            app:layout_column="0"
+            app:layout_row="2"
+            tools:text="--:--" />
+
+        <TextView
+            android:id="@+id/temperature2"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="1"
+            app:layout_row="2"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/humidity2"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="2"
+            app:layout_row="2"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/illumination2"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="3"
+            app:layout_row="2"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/pressure2"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="4"
+            app:layout_row="2"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/ultraviolet2"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="5"
+            app:layout_row="2"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/concentration2"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="6"
+            app:layout_row="2"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/time3"
+            android:layout_width="60dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--:--"
+            app:layout_column="0"
+            app:layout_row="3"
+            tools:text="--:--" />
+
+        <TextView
+            android:id="@+id/temperature3"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="1"
+            app:layout_row="3"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/humidity3"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="2"
+            app:layout_row="3"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/illumination3"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="3"
+            app:layout_row="3"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/pressure3"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="4"
+            app:layout_row="3"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/ultraviolet3"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="5"
+            app:layout_row="3"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/concentration3"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="6"
+            app:layout_row="3"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/time4"
+            android:layout_width="60dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--:--"
+            app:layout_column="0"
+            app:layout_row="4"
+            tools:text="--:--" />
+
+        <TextView
+            android:id="@+id/temperature4"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="1"
+            app:layout_row="4"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/humidity4"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="2"
+            app:layout_row="4"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/illumination4"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="3"
+            app:layout_row="4"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/pressure4"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="4"
+            app:layout_row="4"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/ultraviolet4"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="5"
+            app:layout_row="4"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/concentration4"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="6"
+            app:layout_row="4"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/time5"
+            android:layout_width="60dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--:--"
+            app:layout_column="0"
+            app:layout_row="5"
+            tools:text="--:--" />
+
+        <TextView
+            android:id="@+id/temperature5"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="1"
+            app:layout_row="5"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/humidity5"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="2"
+            app:layout_row="5"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/illumination5"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="3"
+            app:layout_row="5"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/pressure5"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="4"
+            app:layout_row="5"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/ultraviolet5"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="5"
+            app:layout_row="5"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/concentration5"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="6"
+            app:layout_row="5"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/time6"
+            android:layout_width="60dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--:--"
+            app:layout_column="0"
+            app:layout_row="6"
+            tools:text="--:--" />
+
+        <TextView
+            android:id="@+id/temperature6"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="1"
+            app:layout_row="6"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/humidity6"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="2"
+            app:layout_row="6"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/illumination6"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="3"
+            app:layout_row="6"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/pressure6"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="4"
+            app:layout_row="6"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/ultraviolet6"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="5"
+            app:layout_row="6"
+            tools:text="--.--" />
+
+        <TextView
+            android:id="@+id/concentration6"
+            android:layout_width="49dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="--.--"
+            app:layout_column="6"
+            app:layout_row="6"
+            tools:text="--.--" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/time7"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;:&#45;&#45;"-->
+        <!--app:layout_column="0"-->
+        <!--app:layout_row="7"-->
+        <!--tools:text="&#45;&#45;:&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/temperature7"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="1"-->
+        <!--app:layout_row="7"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/humidity7"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="2"-->
+        <!--app:layout_row="7"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/illumination7"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="3"-->
+        <!--app:layout_row="7"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/pressure7"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="4"-->
+        <!--app:layout_row="7"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/ultraviolet7"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="5"-->
+        <!--app:layout_row="7"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/concentration7"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="6"-->
+        <!--app:layout_row="7"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/time8"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;:&#45;&#45;"-->
+        <!--app:layout_column="0"-->
+        <!--app:layout_row="8"-->
+        <!--tools:text="&#45;&#45;:&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/temperature8"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="1"-->
+        <!--app:layout_row="8"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/humidity8"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="2"-->
+        <!--app:layout_row="8"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/illumination8"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="3"-->
+        <!--app:layout_row="8"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/pressure8"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="4"-->
+        <!--app:layout_row="8"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/ultraviolet8"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="5"-->
+        <!--app:layout_row="8"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/concentration8"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="&#45;&#45;.&#45;&#45;"-->
+        <!--app:layout_column="6"-->
+        <!--app:layout_row="8"-->
+        <!--tools:text="&#45;&#45;.&#45;&#45;" />-->
+
+
+    </android.support.v7.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/device_state"
+        android:layout_width="49dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/Button_GetInfo"
+        app:layout_constraintStart_toEndOf="@+id/device"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="- -" />
+
+    <TextView
+        android:id="@+id/device"
+        android:layout_width="72dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/device"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/device_state"
+        app:layout_constraintStart_toEndOf="@+id/find_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/find"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="请输入日期"
+        android:inputType="textPersonName"
+        android:text="XXXX-XX-XX"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/find_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/find_button"
+        android:layout_width="52dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="查询"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/device"
+        app:layout_constraintStart_toEndOf="@+id/find"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="350dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</android.support.constraint.ConstraintLayout>
